@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/curves-cloud-frameworks/curves-cloud-frameworks.iml" filepath="$PROJECT_DIR$/curves-cloud-frameworks/curves-cloud-frameworks.iml" />
+      <module fileurl="file://$PROJECT_DIR$/curves-cloud-fronts/curves-cloud-fronts.iml" filepath="$PROJECT_DIR$/curves-cloud-fronts/curves-cloud-fronts.iml" />
+      <module fileurl="file://$PROJECT_DIR$/curves-cloud-servers/curves-cloud-servers.iml" filepath="$PROJECT_DIR$/curves-cloud-servers/curves-cloud-servers.iml" />
+      <module fileurl="file://$PROJECT_DIR$/curves-cloud-services/curves-cloud-services.iml" filepath="$PROJECT_DIR$/curves-cloud-services/curves-cloud-services.iml" />
+    </modules>
+  </component>
+</project>
