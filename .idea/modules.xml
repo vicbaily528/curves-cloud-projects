@@ -2,10 +2,14 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/curves-cloud-services/curves-account/curves-account.iml" filepath="$PROJECT_DIR$/curves-cloud-services/curves-account/curves-account.iml" />
       <module fileurl="file://$PROJECT_DIR$/curves-cloud-frameworks/curves-cloud-frameworks.iml" filepath="$PROJECT_DIR$/curves-cloud-frameworks/curves-cloud-frameworks.iml" />
       <module fileurl="file://$PROJECT_DIR$/curves-cloud-fronts/curves-cloud-fronts.iml" filepath="$PROJECT_DIR$/curves-cloud-fronts/curves-cloud-fronts.iml" />
       <module fileurl="file://$PROJECT_DIR$/curves-cloud-servers/curves-cloud-servers.iml" filepath="$PROJECT_DIR$/curves-cloud-servers/curves-cloud-servers.iml" />
       <module fileurl="file://$PROJECT_DIR$/curves-cloud-services/curves-cloud-services.iml" filepath="$PROJECT_DIR$/curves-cloud-services/curves-cloud-services.iml" />
+      <module fileurl="file://$PROJECT_DIR$/curves-cloud-fronts/curves-front-webapi/curves-front-webapi.iml" filepath="$PROJECT_DIR$/curves-cloud-fronts/curves-front-webapi/curves-front-webapi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/curves-cloud-fronts/curves-front-webapp/curves-front-webapp.iml" filepath="$PROJECT_DIR$/curves-cloud-fronts/curves-front-webapp/curves-front-webapp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/curves-cloud-servers/curves-servers-eureka/curves-servers-eureka.iml" filepath="$PROJECT_DIR$/curves-cloud-servers/curves-servers-eureka/curves-servers-eureka.iml" />
     </modules>
   </component>
 </project>

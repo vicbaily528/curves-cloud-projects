@@ -6,17 +6,22 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="curves-account" />
         <module name="curves-cloud-frameworks" />
-        <module name="curves-cloud-fronts" />
-        <module name="curves-cloud-servers" />
-        <module name="curves-cloud-services" />
+        <module name="curves-front-webapi" />
+        <module name="curves-front-webapp" />
+        <module name="curves-servers-eureka" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="curves-account" target="1.5" />
       <module name="curves-cloud-frameworks" target="1.5" />
       <module name="curves-cloud-fronts" target="1.5" />
-      <module name="curves-cloud-servers" target="1.5" />
+      <module name="curves-cloud-servers" target="1.8" />
       <module name="curves-cloud-services" target="1.5" />
+      <module name="curves-front-webapi" target="1.5" />
+      <module name="curves-front-webapp" target="1.5" />
+      <module name="curves-servers-eureka" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
