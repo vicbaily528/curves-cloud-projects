@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.curves.account.services.mapper.UsersMapper">
+
+  <!-- DO映射表 -->
+  <resultMap id="BaseResultMap" type="com.curves.account.services.pojo.entity.UserEntity">
+    <id column="uuid" jdbcType="VARCHAR" property="uuid" />
+    <result column="username" jdbcType="VARCHAR" property="username" />
+    <result column="userpass" jdbcType="VARCHAR" property="userpass" />
+    <result column="userage" jdbcType="INTEGER" property="userage" />
+    <result column="dept_uuid" jdbcType="VARCHAR" property="deptUuid" />
+    <result column="phone" jdbcType="VARCHAR" property="phone" />
+    <result column="email" jdbcType="VARCHAR" property="email" />
+    <result column="bisdelete" jdbcType="INTEGER" property="bisdelete" />
+  </resultMap>
+
+  <!-- 表字段 -->
+  <sql id="Base_Column_List">
+    uuid, username, userpass, userage, dept_uuid, phone, email, bisdelete
+  </sql>
+
+  <!-- 分页查询 -->
+  <select id="selectUsersByPage" resultMap="BaseResultMap">
+    select <include refid="Base_Column_List"/> from users
+  </select>
+
+  <!-- 新增对象信息 -->
+  <insert id="insertSelective" parameterType="com.curves.account.services.pojo.entity.UserEntity">
+    insert into users
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="uuid != null">
+        uuid,
+      </if>
+      <if test="username != null">
+        username,
+      </if>
+      <if test="userpass != null">
+        userpass,
+      </if>
+      <if test="userage != null">
+        userage,
+      </if>
+      <if test="deptUuid != null">
+        dept_uuid,
+      </if>
+      <if test="phone != null">
+        phone,
+      </if>
+      <if test="email != null">
+        email,
+      </if>
+      <if test="bisdelete != null">
+        bisdelete,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="uuid != null">
+        #{uuid},
+      </if>
+      <if test="username != null">
+        #{username},
+      </if>
+      <if test="userpass != null">
+        #{userpass},
+      </if>
+      <if test="userage != null">
+        #{userage},
+      </if>
+      <if test="deptUuid != null">
+        #{deptUuid},
+      </if>
+      <if test="phone != null">
+        #{phone},
+      </if>
+      <if test="email != null">
+        #{email},
+      </if>
+      <if test="bisdelete != null">
+        #{bisdelete},
+      </if>
+    </trim>
+  </insert>
+
+  <!-- 通过主键获取对象 -->
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from users
+    where uuid = #{uuid}
+  </select>
+
+  <!-- 更新对象信息 -->
+  <update id="updateByPrimaryKeySelective" parameterType="com.curves.account.services.pojo.entity.UserEntity">
+    update users
+    <set>
+      <if test="username != null">
+        username = #{username},
+      </if>
+      <if test="userpass != null">
+        userpass = #{userpass},
+      </if>
+      <if test="userage != null">
+        userage = #{userage},
+      </if>
+      <if test="deptUuid != null">
+        dept_uuid = #{deptUuid},
+      </if>
+      <if test="phone != null">
+        phone = #{phone},
+      </if>
+      <if test="email != null">
+        email = #{email},
+      </if>
+      <if test="bisdelete != null">
+        bisdelete = #{bisdelete},
+      </if>
+    </set>
+    where uuid = #{uuid}
+  </update>
+
+  <!-- 通过主键删除 -->
+  <delete id="deleteByPrimaryKey">
+    delete from users
+    where uuid = #{uuid}
+  </delete>
+
+  <!-- 批量删除 -->
+  <delete id="deleteByPrimaryKeys">
+    delete from users
+    <where>
+      uuid in
+      <foreach collection="array" item="arr" index="no" open="(" separator="," close=")">
+        #{arr}
+      </foreach>
+    </where>
+  </delete>
+</mapper>
